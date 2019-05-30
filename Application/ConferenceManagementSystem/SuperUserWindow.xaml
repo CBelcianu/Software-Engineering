@@ -1,0 +1,30 @@
+﻿<Window x:Class="ConferenceManagementSystem.SuperUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConferenceManagementSystem"
+        mc:Ignorable="d"
+        Title="Conference Management System" Height="450" Width="800" Background="#FFECECEC" MinWidth="800" MinHeight="450">
+    <Grid>
+        <Grid Height="94" Margin="0,0,-0.4,0" VerticalAlignment="Top" Background="#FF142D4C">
+            <Label Content="You are logged in as: Steering Committee" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Yu Gothic" FontSize="14"/>
+            <Button x:Name="logoutButton" Content="Logout" Margin="0,18,10,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="55" HorizontalAlignment="Right" Width="75" Foreground="Black" Click="LogoutButton_Click" FontFamily="Yu Gothic" FontSize="14"/>
+            <Label Content="Selected conference: " HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="145" FontFamily="Yu Gothic" FontSize="14"/>
+            <Label x:Name="conferenceLabel" Content="None" HorizontalAlignment="Left" Margin="155,42,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic" FontSize="14" Padding="0,5,5,5"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="0,94,0,0" Width="162" Background="#FF385170">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="169*"/>
+                <RowDefinition Height="176*"/>
+            </Grid.RowDefinitions>
+            <ListBox Name="menuListBox" Grid.RowSpan="2" Margin="0,0,0,-0.2" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI" FontSize="14">
+                <ListBoxItem x:Name="conferencesItem" Content="Conferences" HorizontalContentAlignment="Center" Selected="ConferencesItem_Selected"/>
+                <ListBoxItem x:Name="committeeItem" Content="Program Committee" Selected="CommitteeItem_Selected" HorizontalContentAlignment="Center"/>
+                <ListBoxItem x:Name="sectionsItem" Content="Sections" Selected="SectionsItem_Selected" HorizontalContentAlignment="Center"/>
+                <ListBoxItem x:Name="profileItem" Content="Profile" Selected="ProfileItem_Selected" HorizontalContentAlignment="Center"/>
+            </ListBox>
+        </Grid>
+        <Frame x:Name="contentFrame" Margin="162,94,0,0" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

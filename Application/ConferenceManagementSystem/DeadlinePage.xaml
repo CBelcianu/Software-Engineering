@@ -1,0 +1,25 @@
+﻿<Page x:Class="ConferenceManagementSystem.DeadlinePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ConferenceManagementSystem"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="DeadlinePage">
+
+    <Grid Margin="0,0,-290,0">
+        <ListView x:Name="sectionListView" HorizontalAlignment="Left" Height="163" Margin="10,10,0,0" VerticalAlignment="Top" Width="339" ItemsSource="{Binding sections}" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding SectionName}" Header="Name" Width="100"/>
+                    <GridViewColumn x:Name="paperDeadline" DisplayMemberBinding="{Binding PaperDeadline}" Header="Paper Deadline" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding RoomName}" Header="Room" Width="80"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DatePicker x:Name="dateDeadline" HorizontalAlignment="Left" Margin="410,36,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="submitButton" Content="Change Deadline" HorizontalAlignment="Left" Margin="409,127,0,0" VerticalAlignment="Top" Width="102" Click="submitButton_Click"/>
+
+    </Grid>
+</Page>

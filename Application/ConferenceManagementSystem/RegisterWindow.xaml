@@ -1,0 +1,38 @@
+﻿<Window x:Class="ConferenceManagementSystem.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConferenceManagementSystem"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="350" Background="#FF142D4C" WindowStartupLocation="CenterScreen" MinWidth="350" MinHeight="450" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="350" MaxHeight="450">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="36,16,33,323" Height="81" Width="275">
+            <Label Content="ConfMS" Foreground="White" FontSize="50" FontWeight="Bold" FontFamily="Constantia" Height="52" Margin="1,0,0.2,0" Width="274" VerticalAlignment="Center" Padding="0" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label Content="Register" Foreground="White" FontSize="14" FontStyle="Italic" Margin="159,0,18.2,0" Height="23" FontFamily="Constantia" VerticalAlignment="Center" RenderTransformOrigin="0.491,0.472" Padding="0" HorizontalAlignment="Center" Width="98" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <Label Content="First name: " HorizontalAlignment="Left" Margin="24,100,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="100" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <TextBox x:Name="firstNameTextBox" HorizontalAlignment="Left" Height="23" Margin="127,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Last name: " HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="99" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Height="25" Margin="127,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Email: " HorizontalAlignment="Left" Margin="24,156,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="61" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" Height="25" Margin="127,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Username: " HorizontalAlignment="Left" Margin="24,186,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="97" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="25" Margin="127,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Password: " HorizontalAlignment="Left" Margin="24,216,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="94" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="25" Margin="127,216,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Re-enter pass: " HorizontalAlignment="Left" Margin="24,246,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="94" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <PasswordBox x:Name="reEnterPasswordBox" HorizontalAlignment="Left" Height="25" Margin="127,246,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label x:Name="affiliationLabel" Content="Affiliation: " HorizontalAlignment="Left" Margin="24,276,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="97" Height="25" VerticalContentAlignment="Center" Visibility="Visible" Padding="0"/>
+        <TextBox x:Name="affiliationTextBox" HorizontalAlignment="Left" Height="25" Margin="127,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Visibility="Visible"/>
+        <Label x:Name="websiteLabel" Content="Website: " HorizontalAlignment="Left" Margin="24,306,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="83" Height="25" VerticalContentAlignment="Center" Visibility="Visible" Padding="0"/>
+        <TextBox x:Name="websiteTextBox" HorizontalAlignment="Left" Height="25" Margin="127,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Visibility="Visible"/>
+        <Label Content="Login as " HorizontalAlignment="Left" Margin="24,336,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="13" Width="81" Height="25" VerticalContentAlignment="Center" Padding="0"/>
+        <ComboBox x:Name="loginAsComboBox" HorizontalAlignment="Left" Margin="127,336,0,0" VerticalAlignment="Top" Width="160" SelectedIndex="0" Height="25" SelectionChanged="LoginAsComboBox_SelectionChanged">
+            <ComboBoxItem Content="Listener" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Author" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="PC Member" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" Margin="245,375,0,0" VerticalAlignment="Top" Width="66" Click="RegisterButton_Click" Height="22"/>
+    </Grid>
+</Window>

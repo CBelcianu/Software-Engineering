@@ -1,0 +1,44 @@
+﻿<Window x:Class="ConferenceManagementSystem.UserMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConferenceManagementSystem"
+        mc:Ignorable="d"
+        Title="Conference Management System" Height="450" Background="#FFECECEC" MinWidth="800" MinHeight="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="234*"/>
+            <RowDefinition Height="187*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="708*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="94" Margin="0,0,-0.667,0" VerticalAlignment="Top" Background="#FF142D4C" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="You are logged in as:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Yu Gothic" FontSize="14"/>
+            <Label x:Name="fullNameLabel" Content="" HorizontalAlignment="Left" Margin="154,10,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic" FontSize="14"/>
+            <Label Content="Conference Management System" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Yu Gothic" FontSize="14"/>
+            <Button x:Name="logoutButton" Content="Logout" Margin="0,18,9.734,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="55" HorizontalAlignment="Right" Width="75" Foreground="Black" Click="LogoutButton_Click" FontFamily="Yu Gothic" FontSize="14" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="0,94,0,-0.333" Width="162" Background="#FF385170" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="169*"/>
+                <RowDefinition Height="176*"/>
+            </Grid.RowDefinitions>
+            <ListBox Name="menuListBox" Grid.RowSpan="2" Margin="0,0,0,-0.2" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI" FontSize="14">
+                <ListBoxItem x:Name="conferencesItem" Content="Conferences" HorizontalContentAlignment="Center" Selected="ConferencesItem_Selected"/>
+                <ListBoxItem x:Name="papersItem"  Content="Papers" HorizontalContentAlignment="Center" Selected="PapersItem_Selected"/>
+                <ListBoxItem x:Name="reviewsItem" Content="Reviews" HorizontalContentAlignment="Center" Selected="ReviewsItem_Selected"/>
+                <ListBoxItem x:Name="deadlineItem" Content="Deadlines" HorizontalContentAlignment="Center" Selected="DeadlineItem_Selected"/>
+                <ListBoxItem x:Name="myConferencesItem"  Content="My Conferences" Selected="MyConferencesItem_Selected" HorizontalContentAlignment="Center"/>
+                <ListBoxItem x:Name="profileItem" Content="Profile" Selected="ProfileItem_Selected" HorizontalContentAlignment="Center"/>
+            </ListBox>
+        </Grid>
+        <Frame x:Name="contentFrame" Margin="106.667,94,-0.667,-0.333" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
